@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import Navigation from '../common/navigation/index'
 import ScrollTop from '../common/scroll-top/index'
 import Footer from '../common/footer/index'
+import SideNav from "./SideNav"
 
 const containerStyle = {
   paddingTop: '3.5rem',
@@ -18,8 +19,10 @@ const propTypes = {
 
 function PrivateLayout({ children }) {
   return <div style={containerStyle}>
-    <Navigation/>
+    <Navigation />
+    <SideNav />
     <main style={{ minHeight: '100vh'}}>
+      asdasdasdasda
       { children }
       <ScrollTop />
     </main>

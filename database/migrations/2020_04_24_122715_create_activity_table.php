@@ -14,16 +14,15 @@ class CreateActivityTable extends Migration
     public function up()
     {
         Schema::create('activities', function(Blueprint $table){
-           $table->increments('id');
-           $table->unsignedInteger('user_id');
-           $table->string('name');
-           $table->string('slug');
-           $table->text('description');
-           $table->text('content');
-           $table->boolean('published')->default(false);
-           $table->timestamp('published_at')->nullable();
-           $table->softDeletes();
-           $table->timestamps();
+            $table->increments('id');
+            $table->unsignedInteger('user_id');
+            $table->string('title');
+            $table->string('slug'); 
+            $table->text('description');
+            $table->boolean('published')->default(false);
+            $table->timestamp('published_at')->nullable();
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

@@ -51,7 +51,7 @@ class Navigation extends Component {
   render() {
     return (
       <Navbar className="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-        <Link to="/" className="navbar-brand">Let's Go Hydro</Link>
+        <Link to="/" className="navbar-brand"><img className="navbar-brand-logo" src="/images/white-logo.png" title="GreenFields" /></Link>
         <NavbarToggler className="navbar-toggler d-lg-none" onClick={this.toggleNavbar} />
         {
           this.props.isAuthenticated
