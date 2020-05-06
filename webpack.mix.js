@@ -53,3 +53,13 @@ mix.webpackConfig({
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps(false, 'source-map')
     .version();
+
+    if (mix.inProduction()) {
+      mix.version();
+  } else {
+      mix.sourceMaps();
+      mix.browserSync({
+          proxy: "http://192.168.45.45"
+      });
+  }
+  

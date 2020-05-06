@@ -2,10 +2,11 @@ import React from "react"
 
 const displayName = "HomePageHeader"
 
+
 function Header() {
-  return <header className="bg-primary text-white">
+  return <header className="">
     <div className="container text-center">
-      <h1>Let's Go Hydro</h1>
+      <h1>MAIN DASHBOARD</h1>
      
     </div>
   </header>

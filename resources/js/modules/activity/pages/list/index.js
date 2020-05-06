@@ -6,10 +6,12 @@ import Activity from '../../Activity'
 import Page from './Page'
 
 const mapStateToProps = state => {
-  const {data, ...meta} = state.activites
+
+  console.log("STAT£", state)
+  const {data, ...meta} = state.activities
   
   return {
-    activites: data.map((activity) => new Activity(activity)),
+    activities: data.map((activity) => new Activity(activity)),
     meta: Object.assign({}, meta)
   }
 }

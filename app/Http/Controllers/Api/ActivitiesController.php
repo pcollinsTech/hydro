@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ActivityRequest;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Http\JsonResponse;
 
 class ActivitiesController extends Controller
 {
@@ -20,9 +21,12 @@ class ActivitiesController extends Controller
     public function index(Request $request)
     {
         if ($request->user()->is_admin) {
-            return Activity::loadAll();
+            $data = Activity::all();
+           
+        } else {
+            $data = Activity::loadAllMine($request->user()->id);
         }
-        return Activity::loadAllMine($request->user()->id);
+        return new JsonResponse($data); 
     }
 
     /**

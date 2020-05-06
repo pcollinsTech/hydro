@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('published', 'ActivitiesController@publishedActivities')->name('activities.published.index');
+// Route::get('/', 'ActivitiesController@publishedActivities')->name('activities.published.index');
 Route::get('published/{id}', 'ActivitiesController@publishedActivity')->name('activities.published.show');
 
 Route::group(['middleware' => 'auth:api'], function() {

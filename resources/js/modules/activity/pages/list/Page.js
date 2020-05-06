@@ -10,7 +10,7 @@ import Pagination from './components/Pagination'
 import { Link } from 'react-router-dom'
 
 class Page extends Component {
-  static displayName = 'ActivitysPage'
+  static displayName = 'ActivitiesPage'
   static propTypes = {
     meta: PropTypes.object.isRequired,
     activities: PropTypes.array.isRequired,
@@ -30,7 +30,7 @@ class Page extends Component {
   
     dispatch(activityListRequest({}))
   }
-  
+
   pageChange(pageNumber) {
     this.props.dispatch(activityListRequest({ pageNumber }))
   }
@@ -66,8 +66,37 @@ class Page extends Component {
   }
   
   render() {
-    return <main className="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-      <h1>Activities</h1>
+    console.log("HI", this.props)
+    return <main className="mr-4" role="main">
+
+    <div className="container">
+      <div className="row d-flex justify-content-between my-5">
+        <div className="col-sm-4">
+          <div className="card">
+            <div className="card-body">
+              <h4>Activity Data</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non id assumenda repudiandae esse architect</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-4">
+          <div className="card">
+            <div className="card-body">
+              <h4>Activity Data</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non id assumenda repudiandae esse architect</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-4">
+          <div className="card">
+            <div className="card-body">
+              <h4>Activity Data</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non id assumenda repudiandae esse architect</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>Activities Overview </h1>
       <table className="table table-responsive table-striped">
         <thead className="thead-inverse">
         <tr>
@@ -85,6 +114,7 @@ class Page extends Component {
         </tbody>
       </table>
       <Pagination meta={this.props.meta} onChange={this.pageChange}/>
+    </div>
       </main>
   }
 }

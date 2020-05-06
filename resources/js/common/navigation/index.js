@@ -50,8 +50,8 @@ class Navigation extends Component {
   
   render() {
     return (
-      <Navbar className="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-        <Link to="/" className="navbar-brand"><img className="navbar-brand-logo" src="/images/white-logo.png" title="GreenFields" /></Link>
+      <Navbar className="navbar navbar-expand-md mb-5" style={{backgroundColor: "#008DD7"}}>
+        
         <NavbarToggler className="navbar-toggler d-lg-none" onClick={this.toggleNavbar} />
         {
           this.props.isAuthenticated

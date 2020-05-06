@@ -36,7 +36,6 @@ $factory->define(App\Activity::class, function (Faker\Generator $faker) {
         'title' => $title,
         'slug' => Str::slug($title),
         'description' => $faker->sentence(15),
-        'content' => implode(' ', $faker->paragraphs(2)),
         'published' => true,
         'published_at' => \Carbon\Carbon::now(),
     ];

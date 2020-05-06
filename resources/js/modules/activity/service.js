@@ -92,10 +92,9 @@ export function activityListRequest({pageNumber = 1, url = '/activities'}) {
     if (pageNumber > 1) {
       url = url + `?page=${pageNumber}`
     }
-
     Http.get(url)
       .then((res) => {
-        dispatch(activitiesActions.list(transformResponse(res.data)))
+        dispatch(activitiesActions.list(transformResponse(res)))
       })
       .catch((err) => {
         // TODO: handle err

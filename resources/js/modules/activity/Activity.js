@@ -15,7 +15,6 @@ class Activity extends Model {
     this.slug = props.slug || ''
     this.name = props.name || ''
     this.description = props.description || ''
-    this.content = props.content || ''
     this.published = props.published || false
     this.publishedAt = props.publishedAt ? moment(props.publishedAt) : null
 

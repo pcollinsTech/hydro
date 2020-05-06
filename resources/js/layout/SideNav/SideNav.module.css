@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: #1A9FE4;
+    color: white;
+    height: 100vh;
+}
+
+ul{
+    padding-top: 20px;
+}
+ul li{
+    list-style: none;
+    padding: 5px 0;
+}
+
+
+ul li a{
+    color: white;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.6125rem;
+    padding-bottom: 0.6125rem;
+    margin-left: 2rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
